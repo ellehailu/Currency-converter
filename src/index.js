@@ -1,35 +1,40 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Triangle from './js/triangle.js';
-import Rectangle from './js/rectangle.js';
+import ParkService from './js/advice';
 
-function handleTriangleForm() {
-  event.preventDefault();
-  document.querySelector('#response').innerText = null;
-  const length1 = parseInt(document.querySelector('#length1').value);
-  const length2 = parseInt(document.querySelector('#length2').value);
-  const length3 = parseInt(document.querySelector('#length3').value);
-  const triangle = new Triangle(length1, length2, length3);
-  const response = triangle.checkType();
-  const pTag = document.createElement("p");
-  pTag.append(`Your result is: ${response}.`);
-  document.querySelector('#response').append(pTag);
+function getParks(activity){
+   ParkService.getParks(activity)
+   .then(function(response){
+    if (response.data){
+      printElements(response);
+    }
+    else{
+      printError(response);
+    }
+   });
 }
 
-function handleRectangleForm() {
-  event.preventDefault();
-  document.querySelector('#response2').innerText = null;
-  const length1 = parseInt(document.querySelector('#rect-length1').value);
-  const length2 = parseInt(document.querySelector('#rect-length2').value);
-  const rectangle = new Rectangle(length1, length2);
-  const response = rectangle.getArea();
-  const pTag = document.createElement("p");
-  pTag.append(`The area of the rectangle is ${response}.`);
-  document.querySelector('#response2').append(pTag);
+function printElements(response){
+  for(let i = 0; i <10; i ++) {
+    const li = document.createElement('li');
+   li.innerText = `${response.data[0].parks[i].fullName}`;
+    document.querySelector('#parks').append(li);
+  }
+  // console.log(response.data[0].parks[0].fullName);
+  // document.querySelector('#parks').innerText = `${response.data[0].parks[0].fullName}`;
 }
 
-window.addEventListener("load", function() {
-  document.querySelector("#triangle-checker-form").addEventListener("submit", handleTriangleForm);
-  document.querySelector("#rectangle-area-form").addEventListener("submit", handleRectangleForm);
-});
+function printError(error){
+  document.querySelector('#parks').innerText = `${error}`;
+}
+
+
+function handleForm(event) {
+  event.preventDefault();
+  const activity = document.querySelector("#activity").value;
+  getParks(activity);
+}
+
+
+document.querySelector("#nationalParks").addEventListener("submit", handleForm);
