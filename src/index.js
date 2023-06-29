@@ -19,12 +19,12 @@ function livingOnTheEdge(parkName){
     ParkService.thingsToDo(parkName)
         .then(function(response){
             if (response.data){
-                showActivity(response)
+                showActivity(response);
             }
             else {
                 printError(response);
             }
-        })
+        });
 }
 
 function printElements(response){
@@ -36,7 +36,7 @@ function printElements(response){
         li.innerText = `${response.data[0].parks[i].fullName}. You can find out more at: `;
         const aTag = document.createElement("a");
         aTag.setAttribute("href", `${response.data[0].parks[i].url}`);
-        aTag.innerText = `${response.data[0].parks[i].name}`
+        aTag.innerText = `${response.data[0].parks[i].name}`;
         li.append(aTag);
         newList.append(li);
     }
