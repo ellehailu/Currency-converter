@@ -20,7 +20,7 @@ module.exports = {
         verbose: true
     }), // new line
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'National Parks',
       template: './src/index.html',
       inject: 'body'
     }),

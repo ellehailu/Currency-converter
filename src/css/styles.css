@@ -2,6 +2,7 @@ body {
       background-image: url("https://preview.redd.it/national-park-4k-3840x2160-by-a-i-v0-g4crddfnmt9a1.jpg?auto=webp&s=5e92a3bb0952435a962a9071dc0f6e4bcf95d996");
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
   }
 
 .container{
@@ -17,10 +18,21 @@ h1{
   /* color: white; */
 }
 
+img {
+  width: 500px;
+  align-items: center;
+}
+
+a {
+  color:rgb(114, 23, 11)
+}
+
 li {
   list-style-position: inside;
+  text-align: left;
 }
 
 .results {
   margin: 5%;
 }
+

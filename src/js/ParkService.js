@@ -13,4 +13,20 @@ export default class ParkService {
                 return error;
             });
     }
+
+    static thingsToDo(parkName){
+        return fetch(`https://developer.nps.gov/api/v1/thingstodo?q=${parkName}&api_key=${process.env.API_KEY}`)
+            .then(function(response){
+                if(!response.ok){
+                    const errorMessage = `${response.status} ${response.statusText}`;
+                    throw new Error(errorMessage);
+                }
+                else {
+                    return response.json();
+                }
+            })
+            .catch(function(error) {
+                return error;
+            });
+    }
 }
