@@ -1,12 +1,12 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ExchangeRate from './js/ExchangeRate.js';
+import ExchangeRate from './js/ExchangeRate';
 
 function getRate(amount, baseCurrency, exchangeCurrency){
     ExchangeRate.getRate(amount, baseCurrency, exchangeCurrency)
         .then(function(response){
-            if (response.data){
+            if (response.conversion_rate){
                 printElements(response);
             }
             else{
@@ -16,10 +16,8 @@ function getRate(amount, baseCurrency, exchangeCurrency){
 }
 
 function printElements(response){
-    const p = document.createElement('p');
-    p.setAttribute("class", "results");
-    p.innerText = `${response.conversion_rate}`;
-    console.log(p);
+    const conversionRate = response.conversion_rate;
+    console.log(conversionRate);
 }
 
 function printError(error){
@@ -29,11 +27,10 @@ function printError(error){
 
 function handleForm(event) {
     event.preventDefault();
-    const amount = document.querySelector("#amount").value;
-    const baseCurrency = document.querySelector("#baseCurrency").value;
-    const exchangeCurrency = document.querySelector("#exchangeCurrency").value;
+    let amount = document.querySelector("#amount").value;
+    let baseCurrency = document.querySelector("#baseCurrency").value;
+    let exchangeCurrency = document.querySelector("#exchangeCurrency").value;
     getRate(amount, baseCurrency, exchangeCurrency);
-    // document.querySelector("userInput").reset();
 }
 
 document.querySelector("#userInput").addEventListener("submit", handleForm);
