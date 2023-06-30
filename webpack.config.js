@@ -20,7 +20,7 @@ module.exports = {
         verbose: true
     }), // new line
     new HtmlWebpackPlugin({
-      title: 'National Parks',
+      title: 'Currency Converter',
       template: './src/index.html',
       inject: 'body'
     }),

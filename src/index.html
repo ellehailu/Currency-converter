@@ -5,32 +5,31 @@
 </head>
 
 <body>
-  <div class="container" >
-    <form id="nationalParks">
-      <h1> Select an activity to see a list of parks where it is available</h1>
-      <select id="activity">
-        <option value="Astronomy">Astronomy</option>
-        <option value="Camping">Camping</option>
-        <option value="Caving">Caving</option>
-        <option value="Fishing">Fishing</option>
-        <option value="Horse Trekking">Horse Trekking</option>
-        <option value="Scuba Diving">Scuba Diving</option>
-        <option value="Tubing">Tubing</option>
-        <option value="Shopping">Shopping</option>
+  <div class="exchangeRate" >
+    <form id="userInput">
+      <h1> What is the amount you are wanting to convert</h1>
+      <input type="number" id="amout">
+      <h1> What is your base currency?</h1>
+      <select id="baseCurrency">
+        <option value="USD">USD</option>
+        <option value="ETB">ETB</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="PEN">PEN</option>
       </select>
-      <button type="submit">Find some parks!</button>
-    </form>
-  </div>
-  <div class="container" >
-    <form id="thingsToDo">
-      <h1>Type in a park name to see an activity you can do there!</h1>
-      <label for="parkName"></label>
-      <input type="text" id="parkName">
-      <button type="submit">Find some activities!</button>
+      <h1> What currency would you like to convert to? </h1>
+      <select id="exchangeCurrency">
+        <option value="USD">USD</option>
+        <option value="ETB">ETB</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="PEN">PEN</option>
+      </select>
+      <br><button type="submit">convert currency</button>
     </form>
   </div>
   <div class='results' id ='results'>
-    <p id='parks'></p>
+    <p id='resultsMessage'></p>
   </div>
 </body>
 </html>
