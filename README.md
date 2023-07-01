@@ -1,37 +1,42 @@
-# _{Application Name}_
+# _Currency Converter_
 
-#### By _**{List of contributors}**_
+#### By _**Elle Hailu**_
 
-#### _{Brief description of application}_
+#### _An application that offers the user currency conversion_
 
 ## Technologies Used
 
-- _List all_
-- _the major technologies_
-- _you used in your project_
-- _here_
+- _JavaScript_
+- _HTML_
+- _CSS_
+- _Install all packages with $ npm install._
+- Build the project using webpack with $ npm run build.\_
+- Start a development server with $ npm run start
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+- A user can enter an amount in in U.S. dollars, then specify another currency from the listed 5 options and submit the form.
+- Once the form is submitted, the user will see the total amount they entered in converted currency.
 
 ## Setup/Installation Requirements
 
-- _This is a great place_
-- _to list setup instructions_
-- _in a simple_
-- _easy-to-understand_
-- _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+- _Clone this repository to your desktop_
+- _Navigate to the top level of the directory_
+- _Open the files in your prefered source code editor_
+- Visit the ExchangeRate-API site, enter your email and click the "Get Free Key" button. You will be prompted to create an account with your email, first name and passsword. Agree to the terms of use and click "Get Started. At this point, you will be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
+- Create a .env file in your root directory and add it to your .gitignore file. Make sure to commit your .gitignore at this point, before moving on.
+- Place your API key in your .env file.
 
 ## Known Bugs
 
-- _Any known issues_
-- _should go here_
+- _No known bugs in the current version._
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns. Encourage them to contact you or make a contribution to the code.}_
+Copyright (c) _2023_ _Elle Hailu_
 
-Copyright (c) _date_ _author name(s)_
+\_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\_

@@ -15,10 +15,10 @@ module.exports = {
     contentBase: './dist'    
   },
   plugins: [
-    new ESLintPlugin(), // new line!
+    new ESLintPlugin(), 
     new CleanWebpackPlugin({
         verbose: true
-    }), // new line
+    }), 
     new HtmlWebpackPlugin({
       title: 'Currency Converter',
       template: './src/index.html',
