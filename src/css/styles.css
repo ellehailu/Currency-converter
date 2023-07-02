@@ -1,39 +1,21 @@
-/* body {
-    background-image: url("https://preview.redd.it/national-park-4k-3840x2160-by-a-i-v0-g4crddfnmt9a1.jpg?auto=webp&s=5e92a3bb0952435a962a9071dc0f6e4bcf95d996");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    font-size: large;
-  }
-
-.container{
-  font-family: 'Franklin Gothic Medium';
-  border-style: solid;
-  padding: 10px;
-  text-align: center;
-  background-color: rgba(245, 131, 17, 0.868);
-  margin-top: 20px;
-  border-radius: 10px;
-}
-h1{
-   color: white; 
-}
- img {
-  width: 500px;
-  align-items: center;
-  margin-bottom: 20px;
+body{
+  background-color:blanchedalmond;
+  margin-top: 5%;
+  color: rgb(255, 153, 0);
 }
 
-a {
-  color:rgb(114, 23, 11)
+#exchangeCurrency{
+  background-color:  blanchedalmond;
+  border-color: black;
+  color:rgb(255, 153, 0);
+}
+#button{
+  margin-top: 2%;
+  background-color: blanchedalmond;
+  color:rgb(255, 153, 0);
 }
 
-li {
-  list-style-position: inside;
-  text-align: left;
+#results{
+  margin-left: 50%;
+  padding-left: 50%;
 }
-
-.results {
-  margin: 5%;
-}
- */

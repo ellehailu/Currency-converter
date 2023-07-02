@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-  <title>Document</title>
+  <title>Currency Converter</title>
 </head>
 
 <body>
   <div class="container">
+    <h1>Currency Converter</h1>
+    <p>Please enter the amount you want converted into the box below in U.S. dollars. Then select a currency from the drop down menu below to convert to.</p>
     <form id="userInput">
-      <h2>What is the amount you are wanting to convert, in USD?</h2>
+      <h2>What is the amount you are wanting to convert?</h2>
       <input type="number" id="amount" name="amount" min="0" step="0.01">
       <h2> What currency would you like to convert to? </h1>
       <select id="exchangeCurrency">
@@ -18,10 +20,10 @@
         <option value="GBP">GBP</option>
         <option value="PEN">PEN</option>
       </select>
-      <br><button type="submit">convert currency</button>
+      <br><button type="submit" id="button">convert currency</button>
     </form>
   </div>
-  <div class='container' id='results'>
+  <div id='results'>
     <p id='resultsMessage'></p>
   </div>
 </body>

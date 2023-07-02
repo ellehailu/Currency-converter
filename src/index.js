@@ -23,7 +23,7 @@ function printElements(amount,response, exchangeCurrency){
     console.log(newAmount);
     let p = document.createElement('p');
     document.body.append(p);
-    p.innerText = `The current conversion rate from USD to ${exchangeCurrency} is ${((response.conversion_rate).toFixed(2))}. ${amount}USD is ${newAmount} ${exchangeCurrency}.`;
+    p.innerText = `The current conversion rate from USD to ${exchangeCurrency} is ${((response.conversion_rate).toFixed(2))}. \n${amount} USD is ${newAmount} ${exchangeCurrency}.`;
     // return newAmount;
     
     //multiply user amount input by the conversion rate to calculate the converted rate.
