@@ -9,9 +9,10 @@
 - _JavaScript_
 - _HTML_
 - _CSS_
-- _Install all packages with $ npm install._
-- -Build the project using webpack with $ npm run build._
-- _Start a development server with $ npm run start_
+- _Node.Js version 16.13.1_
+- _Webpack version 4.46.0_
+- _Bootstrap version 5.2.3_
+- _Exchange Rate Api_
 
 ## Description
 
@@ -23,9 +24,13 @@
 - _Clone this repository to your desktop_
 - _Navigate to the top level of the directory_
 - _Open the files in your prefered source code editor_
-- _Visit the ExchangeRate-API site, enter your email and click the "Get Free Key" button. You will be prompted to create an account with your email, first name and passsword. Agree to the terms of use and click "Get Started. At this point, you will be able to access a dashboard that includes your API key as well as your remaining API calls for the month._
 - _Create a .env file in your root directory and add it to your .gitignore file. Make sure to commit your .gitignore at this point, before moving on._
 - _Place your API key in your .env file._
+- _Install all packages with $ npm install._
+- _Visit the ExchangeRate-API site, enter your email and click the "Get Free Key" button. You will be prompted to create an account with your email, first name and passsword. Agree to the terms of use and click "Get Started. At this point, you will be able to access a dashboard that includes your API key as well as your remaining API calls for the month._
+- -Build the project using webpack with $ npm run build._
+- _Start a development server with $ npm run start_
+
 
 ## Known Bugs
 
