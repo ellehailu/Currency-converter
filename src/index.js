@@ -4,7 +4,6 @@ import './css/styles.css';
 import ExchangeRate from './js/ExchangeRate';
 
 function getRate(amount, exchangeCurrency) {
-    //might not need base currency input if the user can only convert from USD to other currencies 
     ExchangeRate.getRate(amount, exchangeCurrency)
         .then(function(response){
             if (response.conversion_rate){
@@ -18,15 +17,11 @@ function getRate(amount, exchangeCurrency) {
 
 function printElements(amount,response, exchangeCurrency){
     const conversionRate = response.conversion_rate;
-    console.log(conversionRate);
     let newAmount = amount * conversionRate;
-    console.log(newAmount);
     let p = document.createElement('p');
     document.body.append(p);
-    p.innerText = `The current conversion rate from USD to ${exchangeCurrency} is ${((response.conversion_rate).toFixed(2))}. \n${amount} USD is ${newAmount} ${exchangeCurrency}.`;
-    // return newAmount;
-    
-    //multiply user amount input by the conversion rate to calculate the converted rate.
+    p.innerText = "";
+    p.innerText = `The current conversion rate from USD to ${exchangeCurrency} is ${((response.conversion_rate).toFixed(2))}. \n${amount} USD is ${(newAmount).toFixed(2)} ${exchangeCurrency}.`;
 }
 
 function printError(error){
