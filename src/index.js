@@ -27,7 +27,7 @@ function printElements(amount,response, exchangeCurrency){
 function printError(error){
     let errorMessage = document.createElement('p');
     document.body.appendChild(errorMessage);
-    errorMessage.innerText = `${error}`;
+    errorMessage.innerText = `We are sorry we can't process your request at this time - ${error}`;
     
 }
 
