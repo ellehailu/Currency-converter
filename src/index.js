@@ -25,7 +25,10 @@ function printElements(amount,response, exchangeCurrency){
 }
 
 function printError(error){
-    document.querySelector('#resultsMessage').innerText = `${error}`;
+    let errorMessage = document.createElement('p');
+    document.body.appendChild(errorMessage);
+    errorMessage.innerText = `${error}`;
+    
 }
 
 
